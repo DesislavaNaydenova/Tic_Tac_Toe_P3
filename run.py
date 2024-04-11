@@ -71,8 +71,13 @@ def playerMove():
 
 
 #computer turn
-
-
+def computerMove():
+    possibleMoves = [x for x in range(1, 10) if isinstance(board[(x-1)//3][(x-1)%3], int)]
+    if possibleMoves:
+        move = random.choice(possibleMoves)
+        return move
+    else:
+        return None
 
 #main function
 def main():
@@ -83,7 +88,13 @@ def main():
         if checkWinner(board, "X"):
             print("Congratulations! You win!")
             break
-        computerMove()
+        comp_move = computerMove()
+        if comp_move is not None:
+            insertMark("O", comp_move)
+            print("The computer has made its move.")
+        else:
+            print("No more moves available. It's a tie!")
+            break
         printBoard()
         if checkWinner(board, "O"):
             print("Sorry! Computer wins!")
