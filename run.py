@@ -20,6 +20,11 @@ def printBoard():
             print("", board[x][y], end=" |")
     print("\n+---+---+---+")
 
+#resets the board to enable a new game
+def resetBoard():
+    global board
+    board = [[1,2,3], [4,5,6], [7,8,9]]
+
 #update the board after every turn
 def updateArray(num, turn):
     #calculate location on board based on position num
@@ -99,11 +104,25 @@ def main():
         if checkWinner(board, "O"):
             print("Sorry! Computer wins!")
             break
+    # Ask if the player wants to play again
+    while True:
+        playAgain = input("Do you want to play again? (y/n): ")
+        if playAgain.lower() == "y":
+            resetBoard()
+            main()
+        elif playAgain.lower() == "n":
+            print("Thank you for playing! See you next time!")
+            break
+        else:
+            print("Invalid input. Please enter 'y' or 'n'.")
 
-
+main()
 
 #ask if the player wants to play again
 
-main()
+
+
+
+
 
 
