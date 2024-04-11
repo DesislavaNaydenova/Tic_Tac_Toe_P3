@@ -35,22 +35,18 @@ def posFree(move):
 
 #checking for winn
 def checkWinner(board, player):
-    return 
-        # rows
-        (board[0][0] == board[0][1] == board[0][2] == player) or\
-        (board[1][0] == board[1][1] == board[1][2] == player) or\
-        (board[2][0] == board[2][1] == board[2][2] == player) or\
-        #columns
-        (board[0][0] == board[1][0] == board[2][0] == player) or\
-        (board[0][1] == board[1][1] == board[2][1] == player) or\
-        (board[0][2] == board[1][2] == board[2][2] == player) or\
-        #diagonals
-        (board[0][0] == board[1][1] == board[2][2] == player) or\
-        (board[0][2] == board[1][1] == board[2][0] == player)
+    return (board[0][0] == board[0][1] == board[0][2]) or\
+        (board[1][0] == board[1][1] == board[1][2]) or\
+        (board[2][0] == board[2][1] == board[2][2]) or\
+        (board[0][0] == board[1][0] == board[2][0]) or\
+        (board[0][1] == board[1][1] == board[2][1]) or\
+        (board[0][2] == board[1][2] == board[2][2]) or\
+        (board[0][0] == board[1][1] == board[2][2]) or\
+        (board[0][2] == board[1][1] == board[2][0])
 
 #put the player's mark on the choosen position
 def insertMark(mark, move):
-     row = (move-1) // 3
+    row = (move-1) // 3
     col = (move-1) % 3
     board[row][col] = mark
 
@@ -81,8 +77,22 @@ def playerMove():
 #main function
 def main():
     printBoard()
+    while True:
+        playerMove()
+        printBoard()
+        if checkWinner(board, "X"):
+            print("Congratulations! You win!")
+            break
+        computerMove()
+        printBoard()
+        if checkWinner(board, "O"):
+            print("Sorry! Computer wins!")
+            break
+
+
 
 #ask if the player wants to play again
 
 main()
+
 
