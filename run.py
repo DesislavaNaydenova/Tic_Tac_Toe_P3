@@ -25,7 +25,13 @@ def updateArray(num, turn):
     #calculate location on board based on position num
     row = (num-1) // 3
     col = (num-1) % 3
-    board[x][y] = turn
+    board[row][col] = turn
+
+#checking if the selected position is free
+def posFree(move):
+    row = (move-1) // 3
+    col = (move-1) % 3
+    return board[row][col] == move
 
 #checking for winn
 def checkWinner(board, player):
@@ -42,7 +48,12 @@ def checkWinner(board, player):
         (board[0][0] == board[1][1] == board[2][2] == player) or\
         (board[0][2] == board[1][1] == board[2][0] == player)
 
-
+#put the player's mark on the choosen position
+def insertMark(mark, move):
+     row = (move-1) // 3
+    col = (move-1) % 3
+    board[row][col] == mark
+    
 #player turn
 
 #checking for win
