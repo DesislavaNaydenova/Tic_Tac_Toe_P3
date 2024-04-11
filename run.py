@@ -53,8 +53,23 @@ def insertMark(mark, move):
      row = (move-1) // 3
     col = (move-1) % 3
     board[row][col] == mark
-    
+
 #player turn
+def playerMove():
+    run = True
+    while run:
+        move = input("Select a positin (1-9) to place your mark \"X\": ")
+        if move = int(move):
+            if move > 0 and move <10:
+                if posFree(move):
+                    run = False
+                    insertMark("X", move)
+                else:
+                    print("This position is already been choosen!")
+            else:
+                print("Coose a number in the range between 1 and 9!")
+        else:
+            print("Please type a number!")
 
 #checking for win
 
