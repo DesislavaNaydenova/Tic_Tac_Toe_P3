@@ -28,6 +28,19 @@ def updateArray(num, turn):
     board[x][y] = turn
 
 #checking for winn
+def checkWinner(board, player):
+    return 
+        # rows
+        (board[0][0] == board[0][1] == board[0][2] == player) or\
+        (board[1][0] == board[1][1] == board[1][2] == player) or\
+        (board[2][0] == board[2][1] == board[2][2] == player) or\
+        #columns
+        (board[0][0] == board[1][0] == board[2][0] == player) or\
+        (board[0][1] == board[1][1] == board[2][1] == player) or\
+        (board[0][2] == board[1][2] == board[2][2] == player) or\
+        #diagonals
+        (board[0][0] == board[1][1] == board[2][2] == player) or\
+        (board[0][2] == board[1][1] == board[2][0] == player)
 
 
 #player turn
