@@ -52,14 +52,15 @@ def checkWinner(board, player):
 def insertMark(mark, move):
      row = (move-1) // 3
     col = (move-1) % 3
-    board[row][col] == mark
+    board[row][col] = mark
 
 #player turn
 def playerMove():
     run = True
     while run:
         move = input("Select a positin (1-9) to place your mark \"X\": ")
-        if move = int(move):
+        if move.isdigit:
+            move= int(move)
             if move > 0 and move <10:
                 if posFree(move):
                     run = False
@@ -71,11 +72,11 @@ def playerMove():
         else:
             print("Please type a number!")
 
-#checking for win
+
 
 #computer turn
 
-#checking for win
+
 
 #main function
 def main():
