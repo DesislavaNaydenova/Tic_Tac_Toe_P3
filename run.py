@@ -19,7 +19,16 @@ def printBoard():
         for y in range(columns):
             print("", board[x][y], end=" |")
     print("\n+---+---+---+")
+
+#update the board after every turn
+def updateArray(num, turn):
+    #calculate location on board based on position num
+    row = (num-1) // 3
+    col = (num-1) % 3
+    board[x][y] = turn
+
 #checking for winn
+
 
 #player turn
 
