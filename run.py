@@ -59,8 +59,8 @@ def insertMark(mark, move):
 def playerMove():
     run = True
     while run:
-        move = input("Select a positin (1-9) to place your mark \"X\": ")
-        if move.isdigit:
+        move = input("Select a positin (1-9) to place your mark \"X\": \n")
+        if move.isdigit():
             move= int(move)
             if move > 0 and move <10:
                 if posFree(move):
@@ -106,7 +106,7 @@ def main():
             break
     # Ask if the player wants to play again
     while True:
-        playAgain = input("Do you want to play again? (y/n): ")
+        playAgain = input("Do you want to play again? (y/n): \n")
         if playAgain.lower() == "y":
             resetBoard()
             main()
