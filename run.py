@@ -1,5 +1,10 @@
 import random
 
+# ANSI color escape codes
+GREEN = '\033[32m'
+RED = '\033[91m'
+RESET = '\033[0m'
+
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("Welcome to my TicTacToe Game!")
 print("          Enjoy!")
@@ -17,7 +22,12 @@ def printBoard():
         print("\n+---+---+---+")
         print("|", end = "")
         for y in range(columns):
-            print("", board[x][y], end=" |")
+            if board[x][y] == "X":
+                print("", f"{GREEN}X{RESET}", end=" |")
+            elif board[x][y] == "O":
+                print("", f"{RED}O{RESET}" , end=" |")
+            else:
+                print("", board[x][y], end=" |")
     print("\n+---+---+---+")
 
 #resets the board to enable a new game
