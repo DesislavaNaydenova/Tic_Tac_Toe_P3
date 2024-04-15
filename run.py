@@ -18,6 +18,8 @@ rows = 3
 columns = 3
 
 def printBoard():
+    """Ensures that the gameboard is visually represented in the terminal, 
+    with "X" and "O" markers colored differently for better visibility"""
     for x in range(rows):
         print("\n+---+---+---+")
         print("|", end = "")
@@ -30,26 +32,33 @@ def printBoard():
                 print("", board[x][y], end=" |")
     print("\n+---+---+---+")
 
-#resets the board to enable a new game
+
 def resetBoard():
+    """
+    Resets the board to enable a new game
+    """
     global board
     board = [[1,2,3], [4,5,6], [7,8,9]]
 
-#update the board after every turn
+
 def updateArray(num, turn):
-    #calculate location on board based on position num
+    """
+    Updates the board after every turn and
+    calculates location on board based on position num"""
     row = (num-1) // 3
     col = (num-1) % 3
     board[row][col] = turn
 
-#checking if the selected position is free
+
 def posFree(move):
+    """Checks if the selected position is free"""
     row = (move-1) // 3
     col = (move-1) % 3
     return board[row][col] == move
 
-#checking for winn
+
 def checkWinner(board, player):
+    """Checks for win"""
     return (board[0][0] == board[0][1] == board[0][2]) or\
         (board[1][0] == board[1][1] == board[1][2]) or\
         (board[2][0] == board[2][1] == board[2][2]) or\
@@ -59,14 +68,18 @@ def checkWinner(board, player):
         (board[0][0] == board[1][1] == board[2][2]) or\
         (board[0][2] == board[1][1] == board[2][0])
 
-#put the player's mark on the choosen position
+
 def insertMark(mark, move):
+    """Puts the player's mark on the choosen position"""
     row = (move-1) // 3
     col = (move-1) % 3
     board[row][col] = mark
 
-#player turn
+
 def playerMove():
+    """ Handles the player move by getting the players input,
+    checks it if it's an int. in range 1-9 
+    and if the choosen position is free """
     run = True
     while run:
         move = input("Select a positin (1-9) to place your mark \"X\": \n")
@@ -87,6 +100,8 @@ def playerMove():
 
 #computer turn
 def computerMove():
+    """Ensures that the computer selects a valid, 
+    random move from the available empty positions on the board"""
     possibleMoves = [x for x in range(1, 10) if isinstance(board[(x-1)//3][(x-1)%3], int)]
     if possibleMoves:
         move = random.choice(possibleMoves)
@@ -96,6 +111,9 @@ def computerMove():
 
 #main function
 def main():
+    """Arranges the game flow, 
+    handles player and computer moves, checks for a winner, 
+    and manages the play-again functionality"""
     printBoard()
     while True:
         playerMove()
@@ -128,7 +146,6 @@ def main():
 
 main()
 
-#ask if the player wants to play again
 
 
 
