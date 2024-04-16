@@ -1,32 +1,47 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tic Tac Toe Game
 
-Welcome,
+Tic Tac Toe Game is a Python-based game that runs in the mock terminal in Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The user can try to beat the computer by putting his marks on the board and trying to build a row of 3 before the computer does.
 
-## Reminders
+[Here is the live version of my project](https://tictact-068cd7ef6bf7.herokuapp.com/)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+![Am I Responsive](assets/imgs/AmIResponsive.png)
 
-## Creating the Heroku app
+## How to play
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Tic-tac-toe is played on a three-by-three grid by two players, in this case player and computer, who alternately place the marks X and O in one of the nine spaces in the grid. Players soon discover that the best play from both parties leads to a tie. You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe).
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Existing features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- At the beginning of the game, the user sees the 3x3 grid with numerated fields.
 
-Connect your GitHub repository and deploy as normal.
+![Starting the game](assets/imgs/Game_start.png)
 
-## Constraints
+- For more user-friendliness, the user can start the game by choosing a field.
+- User's choice is marked with a green X.
+- The computer chooses automatically and is marked with a red O.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![Making the first move](assets/imgs/First_choice.png)
 
----
+- The game continues until the program detects a win situation or there are no more free fields on the gameboard.
 
-Happy coding!
+![X wins](assets/imgs/X_wins.png)
+
+![O wins](assets/imgs/O_wins.png)
+
+![It's a Tie!](assets/imgs/Tie.png)
+
+- After every game, the user is asked if he wants to play again. By typing "y" or "n", he makes the decision.
+
+- The program only accepts input from 1 to 9 during the game and only "y" or "n" to choose whether to play again or not.
+
+![Controlling errors](assets/imgs/Users_choice.png)
+
+![Controlling errors](assets/imgs/y_n.png)
+
+- The user is not able to choose a taken field.
+
+![Field already chosen](assets/imgs/same_choice.png)
