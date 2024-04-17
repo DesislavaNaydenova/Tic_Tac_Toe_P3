@@ -2,6 +2,16 @@
 
 It lets the player make a move, calculates a random move
 for the computerand displays the results of the game.
+
+Credits:
+- Developed by: Desislava Naydenova
+- Inspired by:
+    - [Tech With Tim - Tic Tac Toe Tutorial](https://www.techwithtim.net
+    /tutorials/python-programming/tic-tac-toe-tutorial/the-game)
+    - [YouTube Video - Tic Tac Toe Tutorial](https://www.youtube.com
+    /watch?v=M3G1ZgOMFxo)
+    - [YouTube Video - Tic Tac Toe Python Tutorial](https://www.youtube.com
+    /watch?v=dK6gJw4-NCo&t=25s)
 """
 import random
 
@@ -67,11 +77,7 @@ def pos_free(move):
 
 
 def check_winner(board, player):
-    """Check for win.
-    Credits: 
-    https://www.techwithtim.net/tutorials/python-programming/tic-tac-toe-tutorial/the-game
-    
-    """
+    """Check for win."""
     return (board[0][0] == board[0][1] == board[0][2]) or\
         (board[1][0] == board[1][1] == board[1][2]) or\
         (board[2][0] == board[2][1] == board[2][2]) or\
