@@ -67,7 +67,11 @@ def pos_free(move):
 
 
 def check_winner(board, player):
-    """Check for win."""
+    """Check for win.
+    Credits: 
+    https://www.techwithtim.net/tutorials/python-programming/tic-tac-toe-tutorial/the-game
+    
+    """
     return (board[0][0] == board[0][1] == board[0][2]) or\
         (board[1][0] == board[1][1] == board[1][2]) or\
         (board[2][0] == board[2][1] == board[2][2]) or\

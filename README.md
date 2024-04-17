@@ -44,4 +44,61 @@ Tic-tac-toe is played on a three-by-three grid by two players, in this case play
 
 - The user is not able to choose a taken field.
 
-![Field already chosen](assets/imgs/same_choice.png)
+![Field already chosen](assets/imgs/same_coice.png)
+
+
+### Future features
+
+- Implement different levels of difficulty with own AI.
+- Implement a way for the player to choose the difficulty level before starting the game.
+- Provide feedback to the player during the game to indicate the AI's difficulty level.
+
+## Data Model
+
+I decided to create a game board, that shows the numbers of the fields, so the player can choose easily. Each field on the board can hold either "X","O", or a number, which indicates, that the field isn't ocupated.  
+
+The player is asked to choose a number 1-9 in order to make his move. The program is checking if the player's input is valid number within the range and if the chosen position is free before updating the board with the player's mark.  
+
+The computer move is calculated by checking the current state of the game board and generating a random number in the range. 
+The board is updated after every move.  
+
+The "check_winner()" function checks the winning conditions after every move. If it detects a winning situation (horisontaly, verticaly or diagonaly) it returnes True, indicating a win.  
+
+The "main()" function organises the game flow, including player moves, computer moves, checking for a winner, and handling play again functionality.
+
+
+## Testing
+
+ I have manualy tested the project by:
+- Passed the code through PEP8 liner.
+- Tested in my own terminal and in the Heroku app terminal.
+
+
+### Bugs
+#### Solved Bugs:
+
+- By playing the game in the beginning the program was giving an error if the user's input was unvalid, which I fixed with an If - Else statement. 
+- Passing the code through PEP8 liner showed a lot of issues, that I fixed.
+
+#### Unsolved Bugs:
+
+- None
+
+## Deployment
+
+The project was deployed using the Code Insitute's mock terminal for Heroku.
+ - Steps of deployment:
+    - Clone the repository
+    - Create a new Heroku app
+    - Set the buildpacks to Python and NodeJS
+    - Link the Heroku app to the repository
+    - Deploy
+
+## Credits
+
+1. Code Institute for the deployment terminal.
+2. Different [YouTube](https://www.youtube.com/) tutorials for ideas how to build the game.
+3. [Wickipedia](https://en.wikipedia.org/wiki/Tic-tac-toe) for the exact rules of the game.
+4. [ChatGPT](https://chat.openai.com/) for helping correct some typos.
+
+
