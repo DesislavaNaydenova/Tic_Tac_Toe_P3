@@ -66,6 +66,8 @@ The "check_winner()" function checks the winning conditions after every move. If
 
 The "main()" function organises the game flow, including player moves, computer moves, checking for a winner, and handling play again functionality.
 
+![Flowchart for the game](assets/imgs/Flow_chart.png)
+
 
 ## Testing
 
@@ -77,7 +79,10 @@ The "main()" function organises the game flow, including player moves, computer 
 ### Bugs
 #### Solved Bugs:
 
-- By playing the game in the beginning the program was giving an error if the user's input was unvalid, which I fixed with an If - Else statement. 
+- By playing the game in the beginning the program was giving an error if the user's input was unvalid, which I fixed. 
+
+![Fixed Bug](assets/imgs/Bug.png)
+
 - Passing the code through PEP8 liner showed a lot of issues, that I fixed.
 
 #### Unsolved Bugs:
