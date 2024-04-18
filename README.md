@@ -71,15 +71,16 @@ The "main()" function organises the game flow, including player moves, computer 
 
 ## Testing
 
- I have manualy tested the project by:
+ I have manually tested the project by:
 - Passed the code through PEP8 liner.
-- Tested in my own terminal and in the Heroku app terminal.
+- Tested manually in my own terminal and in the Heroku app terminal. See Features above.
+- Testet the input validation.
 
 
 ### Bugs
 #### Solved Bugs:
 
-- By playing the game in the beginning the program was giving an error if the user's input was unvalid, which I fixed. 
+- By playing the game in the beginning the program was giving an error if the user's input was unvalid, which I fixed. [GitHub Commit](https://github.com/DesislavaNaydenova/Tic_Tac_Toe_P3/commit/2a57cd4ff6d5e63b6c71d6e683c82c47359a5086)
 
 ![Fixed Bug](assets/imgs/Bug.png)
 
