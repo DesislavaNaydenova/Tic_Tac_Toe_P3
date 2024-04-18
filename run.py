@@ -5,13 +5,6 @@ for the computerand displays the results of the game.
 
 Credits:
 - Developed by: Desislava Naydenova
-- Inspired by:
-    - [Tech With Tim - Tic Tac Toe Tutorial](https://www.techwithtim.net
-    /tutorials/python-programming/tic-tac-toe-tutorial/the-game)
-    - [YouTube Video - Tic Tac Toe Tutorial](https://www.youtube.com
-    /watch?v=M3G1ZgOMFxo)
-    - [YouTube Video - Tic Tac Toe Python Tutorial](https://www.youtube.com
-    /watch?v=dK6gJw4-NCo&t=25s)
 """
 import random
 
@@ -26,13 +19,14 @@ print("          Enjoy!")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 # creating the board
-
+# Inspired by https://www.youtube.com/watch?v=M3G1ZgOMFxo
 cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 rows = 3
 columns = 3
 
 
+# Inspired by https://www.youtube.com/watch?v=M3G1ZgOMFxo
 def print_board():
     """
     Ensure that the gameboard is visually represented in the terminal.
@@ -52,6 +46,7 @@ def print_board():
     print("\n+---+---+---+")
 
 
+# Inspired by https://www.youtube.com/watch?v=M3G1ZgOMFxo
 def reset_board():
     """Reset the board to enable a new game."""
     global board
@@ -76,6 +71,7 @@ def pos_free(move):
     return board[row][col] == move
 
 
+# https://www.techwithtim.net/tutorials/python-programming/tic-tac-toe-tutorial/the-game
 def check_winner(board, player):
     """Check for win."""
     return (board[0][0] == board[0][1] == board[0][2]) or\
@@ -95,6 +91,7 @@ def insert_mark(mark, move):
     board[row][col] = mark
 
 
+# https://www.techwithtim.net/tutorials/python-programming/tic-tac-toe-tutorial/the-game
 def player_move():
     """Handle the player move by getting the players input.
 

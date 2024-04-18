@@ -102,8 +102,10 @@ The project was deployed using the Code Insitute's mock terminal for Heroku.
 ## Credits
 
 1. Code Institute for the deployment terminal.
-2. Different [YouTube](https://www.youtube.com/) tutorials for ideas how to build the game.
+2. [Tech wit Tim](https://www.techwithtim.net/tutorials/python-programming/tic-tac-toe-tutorial/the-game) tutorials for ideas how to build the game.
 3. [Wickipedia](https://en.wikipedia.org/wiki/Tic-tac-toe) for the exact rules of the game.
 4. [ChatGPT](https://chat.openai.com/) for helping correct some typos.
+5. [YouTube Video- Tic Tac Toe Tutorial](https://www.youtube.com/watch?v=M3G1ZgOMFxo)
+6. [Code Coach](https://www.youtube.com/watch?v=dK6gJw4-NCo&t=25s)
 
 
